@@ -297,8 +297,7 @@ function propagateItemsByPositionIndex(/* arr */) {
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
 function get3TopItems(arr) {
-  // const rez = []
-  arr.sort((a, b) => b - a).slice(0, 3);
+  return arr.sort((a, b) => b - a).slice(0, 3);
 }
 
 
@@ -315,10 +314,9 @@ function get3TopItems(arr) {
  *   [ null, 1, 'elephant' ] => 1
  *   [ 1, '2' ] => 1
  */
-function getPositivesCount(/* arr */) {
-  throw new Error('Not implemented');
+function getPositivesCount(arr) {
+  return arr.filter((v) => v >= 0).length;
 }
-
 /**
  * Sorts digit names
  *
@@ -454,10 +452,9 @@ function sortCitiesArray(/* arr */) {
  *           [0,0,0,1,0],
  *           [0,0,0,0,1]]
  */
-function getIdentityMatrix(/* n */) {
-  throw new Error('Not implemented');
+function getIdentityMatrix(n) {
+  return [...Array(n)].map((_e1, x, arr) => arr.map((_e2, y) => (x === y ? 1 : 0)));
 }
-
 /**
  * Creates an array of integers from the specified start to end (inclusive)
  *
