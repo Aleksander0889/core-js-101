@@ -20,14 +20,14 @@
  *    console.log(r.height);      // => 20
  *    console.log(r.getArea());   // => 200
  */
-function Rectangle(width, height) {
-  this.width = width;
-  this.height = height;
-  this.getArea = function () {
-    return this.width * this.height;
-  };
+function Rectangle(/* width, height */) {
+  // this.width = width;
+  // this.height = height;
+  // this.getArea = function () {
+  //   return this.width * this.height;
+  // };
 }
-
+s
 
 /**
  * Returns the JSON representation of specified object

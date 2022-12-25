@@ -1,22 +1,39 @@
 {
-  "name": "core-js-101",
+  "name": "my-webpack-project",
   "version": "1.0.0",
-  "description": "Core JS 101",
+  "description": "My webpack project",
   "scripts": {
     "test": "npm run lint && mocha",
     "lint": "node node_modules/eslint/bin/eslint.js ./src",
-    "lint:fix": "node node_modules/eslint/bin/eslint.js ./src --fix"
+    "lint:fix": "node node_modules/eslint/bin/eslint.js ./src --fix",
+    "build": "webpack --mode=production --define-process-env-node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --define-process-env-node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
   },
   "author": "aorgish, mikhama",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^6.6.0",
+    "@webpack-cli/generators": "^3.0.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "mocha": "^6.2.2"
+    "html-webpack-plugin": "^5.5.0",
+    "mocha": "^6.2.2",
+    "prettier": "^2.8.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1",
+    "workbox-webpack-plugin": "^6.5.4"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/mikhama/core-js-101.git"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2"
   }
 }
