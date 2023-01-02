@@ -46,6 +46,7 @@ function getComposition(/* f, g */) {
  */
 function getPowerFunction(/* exponent */) {
 
+
 }
 
 /**
@@ -147,9 +148,7 @@ function logger(/* func, logFunc */) {
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
 function partialUsingArguments(fn, ...args1) {
-  return function (...args) {
-    return fn(...args1, ...args);
-  };
+  return ((...arg) => fn(...args1, ...arg));
 }
 
 /**
