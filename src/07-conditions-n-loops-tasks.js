@@ -80,8 +80,9 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-function isTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isTriangle(a, b, c) {
+  const arr = [a, b, c].sort();
+  return arr[2] < (arr[0] + arr[1]);
 }
 
 
@@ -149,7 +150,9 @@ function doRectanglesOverlap(/* rect1, rect2 */) {
  *
  */
 function isInsideCircle(/* circle, point */) {
-  throw new Error('Not implemented');
+  // if ((x - circle_x) * (x - circle_x)
+  //       + (y - circle_y) * (y - circle_y) <= rad * rad) return true;
+  // return false;
 }
 
 
@@ -250,8 +253,12 @@ function reverseInteger(num) {
  *   5436468789016589 => false
  *   4916123456789012 => false
  */
-function isCreditCardNumber(/* ccn */) {
-  throw new Error('Not implemented');
+function isCreditCardNumber(ccn) {
+  const cardno = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
+  if (ccn.value.match(cardno)) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -268,8 +275,20 @@ function isCreditCardNumber(/* ccn */) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(/* num */) {
-  throw new Error('Not implemented');
+function getDigitalRoot(num) {
+  const sNumero = num.toString();
+  let sum = 0;
+
+
+  for (let i = 0; i < sNumero.length; i += 1) {
+    sum += Number(sNumero[i]);
+  }
+
+  if (sum > 9) {
+    return getDigitalRoot(sum);
+  }
+
+  return sum;
 }
 
 
@@ -295,9 +314,7 @@ function getDigitalRoot(/* num */) {
  *   '{[(<{[]}>)]}' = true
  */
 function isBracketsBalanced(/* str */) {
-  throw new Error('Not implemented');
 }
-
 
 /**
  * Returns the string with n-ary (binary, ternary, etc, where n <= 10)
@@ -320,7 +337,7 @@ function isBracketsBalanced(/* str */) {
  *    365, 10 => '365'
  */
 function toNaryString(/* num, n */) {
-  throw new Error('Not implemented');
+
 }
 
 

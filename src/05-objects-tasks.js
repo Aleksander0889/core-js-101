@@ -27,7 +27,6 @@ function Rectangle(/* width, height */) {
   //   return this.width * this.height;
   // };
 }
-s
 
 /**
  * Returns the JSON representation of specified object
